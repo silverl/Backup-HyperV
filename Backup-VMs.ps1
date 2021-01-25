@@ -8,7 +8,7 @@
   -SendTo "lsilverman@trackabout.com" `
   -From "hyperv@trackabout.com" `
   -Smtp "smtp.postmarkapp.com" `
-  -SmtpPort 587
+  -SmtpPort 587 `
   -User $username `
   -Pwd .\pwd.txt `
   -UseSsl `
