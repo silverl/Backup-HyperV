@@ -1,4 +1,5 @@
-﻿& "J:\Scripts\Hyper-V-Backup\Hyper-V-Backup.ps1" `
+﻿$username = Get-Content -Path .\username.txt
+& "J:\Scripts\Hyper-V-Backup\Hyper-V-Backup.ps1" `
   -BackupTo J:\Hyper-V-Backups `
   -List .\vms.txt `
   -Keep 3 `
@@ -7,7 +8,8 @@
   -SendTo "lsilverman@trackabout.com" `
   -From "hyperv@trackabout.com" `
   -Smtp "smtp.postmarkapp.com" `
-  -User "89acf9c8-f9b1-4ef4-8779-cc609c713282" `
+  -SmtpPort 587
+  -User $username `
   -Pwd .\pwd.txt `
   -UseSsl `
   -NoPerms `
